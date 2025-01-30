@@ -1,0 +1,17 @@
+show=drun
+width=40%
+height=635
+term=foot
+location=center
+drun-display_generic=true
+hide_scroll=true
+insensitive=true
+normal_window=true
+allow_images=true
+image_size=30px
+columns=1
+/*prompt= 🇨🇳🚏⤾·˚🚗 ᯓ🪧⋆*₊🚜₁₁ }▸ 𝐝𝐮𝐝𝐮～*/
+prompt=🐍²⁰²⁵拜年啦🧨🐍年大吉🐍来运转✨金🐍献瑞🌟🧧大吉大利💰
+key_up=Ctrl-p
+key_down=Ctrl-n
+key_expand=Ctrl-b

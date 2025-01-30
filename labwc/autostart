@@ -1,0 +1,52 @@
+# Example autostart file
+
+# Set background color.
+#swaybg -c '#113344' >/dev/null 2>&1 &
+
+# Configure output directives such as mode, position, scale and transform.
+# Use wlr-randr to get your output names
+# Example ~/.config/kanshi/config below:
+#   profile {
+#     output HDMI-A-1 position 1366,0
+#     output eDP-1 position 0,0
+#   }
+kanshi >/dev/null 2>&1 &
+
+# Launch a panel such as yambar or waybar.
+waybar >/dev/null 2>&1 &
+#sfwbar -f vertical.config >/dev/null 2>&1 &
+
+# Enable notifications. Typically GNOME/KDE application notifications go
+# through the org.freedesktop.Notifications D-Bus API and require a client such
+# as mako to function correctly. Thunderbird is an example of this.
+mako >/dev/null 2>&1 &
+
+# Lock screen after 5 minutes; turn off display after another 5 minutes.
+#
+# Note that in the context of idle system power management, it is *NOT* a good
+# idea to turn off displays by 'disabling outputs' for example by
+# `wlr-randr --output <whatever> --off` because this re-arranges views
+# (since a837fef). Instead use a wlr-output-power-management client such as
+# https://git.sr.ht/~leon_plickat/wlopm
+swayidle -w \
+    timeout 300 'swaylock -f -c 000000' \
+	timeout 600 'wlopm --off \*' \
+        resume 'wlopm --on \*' \
+    before-sleep 'swaylock -f -c 000000' >/dev/null 2>&1 &
+
+lxqt-policykit-agent >/dev/null 2>&1 &
+# 鼠标按键映射到快捷键
+input-remapper-control --command autoload >/dev/null 2>&1 &
+sleep 3s && swaybg -i ~/Pictures/wallpaper/461079.jpg >/dev/null 2>&1 &
+fcitx5 >/dev/null 2>&1 &
+sleep 5s && aria2c --conf-path=/home/tankb51/.config/aria2/aria2.conf >/dev/null 2>&1 &
+sleep 7s && keepassxc >/dev/null 2>&1 &
+sleep 10s && autokey >/dev/null 2>&1 &
+sleep 12s && vivaldi >/dev/null 2>&1 &
+# 根据深圳经纬度来定制
+sleep 20s && wlsunset -l 22.6 -L 114 >/dev/null 2>&1 &
+xrdb -load ~/.Xresources >/dev/null 2>&1 &
+
+# cliphist
+wl-paste --type text --watch cliphist store >/dev/null 2>&1 & # Stores only text data
+wl-paste --type image --watch cliphist store >/dev/null 2>&1 & # Stores only image data

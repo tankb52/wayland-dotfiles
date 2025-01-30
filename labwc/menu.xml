@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu>
+<!-- Note: for localization support of menu items "client-menu" has to be removed here -->
+<menu id="client-menu">
+  <item label="最小化">
+    <action name="Iconify" />
+  </item>
+  <item label="最大化">
+    <action name="ToggleMaximize" />
+  </item>
+  <item label="全屏">
+    <action name="ToggleFullscreen" />
+  </item>
+  <item label="卷起/展开">
+      <action name="ToggleShade" />
+  </item>
+  <item label="去除装饰">
+    <action name="ToggleDecorations" />
+  </item>
+  <item label="置顶">
+    <action name="ToggleAlwaysOnTop" />
+  </item>
+  <item label="移动">
+    <action name="Move" />
+  </item>
+  <!--
+    Any menu with the id "workspaces" will be hidden
+    if there is only a single workspace available.
+  -->
+  <menu id="workspaces" label="Workspace">
+    <item label="Move Left">
+      <action name="SendToDesktop" to="left" />
+    </item>
+    <item label="Move Right">
+      <action name="SendToDesktop" to="right" />
+    </item>
+    <separator />
+    <item label="Always on Visible Workspace">
+      <action name="ToggleOmnipresent" />
+    </item>
+  </menu>
+  <!--
+    openbox default workspace selector
+    to use replace above workspace menu with the example below
+    the label is required, but you can change the text.
+
+    <menu id="client-send-to-menu" label="Send to..." />
+  -->
+  <item label="Close">
+    <action name="Close" />
+  </item>
+</menu>
+
+<menu id="root-menu">
+  <!-- Make client-list-combined-menu a submenu of root-menu 
+       You must supply a label or it will not appear in root-menu -->
+  <!--
+  <menu id="client-list-combined-menu" label="Running..." />
+  -->
+  <item label="Web browser">
+    <action name="Execute" command="vivaldi" />
+  </item>
+  <item label="Terminal">
+    <action name="Execute" command="alacritty" />
+  </item>
+  <item label="jgmenu">
+    <action name="Execute" command="jgmenu_run" />
+  </item>
+  <menu id="applications-menu" label="Applications" execute="/usr/bin/obamenu"/>
+  <item label="Reconfigure">
+    <action name="Reconfigure" />
+  </item>
+  <item label="Exit">
+    <action name="Exit" />
+  </item>
+  <item label="Poweroff">
+    <action name="Execute" command="systemctl -i poweroff" />
+  </item>
+</menu>
+
+<menu id="some-custom-menu">
+  <!--
+    Creates menu title.
+    To create an empty header with no text,
+    set label=" ", not label=""
+  -->
+  <separator label="custom menu" />
+  <item label="Reconfigure">
+    <action name="Reconfigure" />
+  </item>
+  <item label="Exit">
+    <action name="Exit" />
+  </item>
+</menu>
+
+</openbox_menu>

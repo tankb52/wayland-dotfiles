@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+
+<!--
+  This is a very simple config file with many options missing. For a complete
+  set of options with comments, see docs/rc.xml.all
+-->
+
+<labwc_config>
+
+  <theme>
+    <name>SBColor_monolith</name>
+    <cornerRadius>4</cornerRadius>
+    <font name="sans" size="12" />
+  </theme>
+
+  <keyboard>
+    <default />
+    <!-- Use a different terminal emulator -->
+    <keybind key="W-Return">
+      <action name="Execute" command="alacritty" />
+    </keybind>
+    <!--
+      Remove a previously defined keybind
+      A shorter alternative is <keybind key="W-F4" />
+    -->
+    <keybind key="S-space">
+      <action name="Execute" command="wofi --show drun" />
+    </keybind>
+    <keybind key="A-v">
+      <action name="Execute">
+        <command>~/.vim-anywhere/bin/run</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-u">
+        <action name="Execute">
+            <command>alacritty</command>
+        </action>
+    </keybind>
+    <keybind key="C-A-t">
+        <action name="Execute">
+            <command>xfce4-terminal</command>
+        </action>
+    </keybind>
+    <keybind key="C-A-f">
+        <action name="Execute">
+            <command>foot</command>
+        </action>
+    </keybind>
+    <keybind key="W-c">
+        <action name="Execute">
+            <command>sh ~/.config/openbox/closeLCD.sh</command>
+        </action>
+    </keybind>
+    <keybind key="W-l">
+        <action name="Execute">
+            <command>swaylock --image ~/Pictures/wallpaper/lock/lock01.jpeg</command>
+        </action>
+    </keybind>
+    <keybind key="W-d">
+        <action name="Execute">
+            <command>sh ~/.config/labwc/script/showDeskTop.sh</command>
+        </action>
+    </keybind>
+    <keybind key="C-A-v">
+        <action name="Execute" command="sh ~/.config/wofi/cliphist.sh" />
+    </keybind>
+    <keybind key="A-S-a">
+        <action name="Execute" command="sh ~/.config/labwc/script/wayland_shot.sh" />
+    </keybind>
+</keyboard>
+
+    <desktops>
+      <popupTime>1000</popupTime>
+      <names>
+        <name>天</name>
+        <name>地</name>
+        <name>玄</name>
+        <name>黄</name>
+      </names>
+    </desktops>
+  <mouse>
+    <default />
+    <!-- Show a custom menu on desktop right click -->
+    <context name="Root">
+      <mousebind button="Right" action="Press">
+        <action name="ShowMenu" menu="some-custom-menu" />
+      </mousebind>
+    </context>
+  </mouse>
+  <windowRules>
+      <!-- Property -->
+      <!-- 
+      针对特定窗口去除装饰
+       -->
+      <windowRule identifier="wofi" serverDecoration="no" />
+
+  </windowRules>
+</labwc_config>
