@@ -24,7 +24,7 @@
   border-radius: 0;
 	font-family: "Segoe UI", "Ubuntu";
   font-weight: 600;
-  font-size: 12.7px;
+  font-size: 12px;
 	
 	
 }
@@ -46,9 +46,21 @@ tooltip label{
   color: @content_main;
 }
 
-#custom-os_button {
+#custom-jgmenu {
 	font-family: "JetBrainsMono Nerd Font";
   font-size: 24px;
+	padding-left: 12px;
+	padding-right: 20px;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#custom-jgmenu:hover {
+  background:  @bg_hover;
+	color: @content_main;
+}
+
+#custom-os_button {
+	font-family: "JetBrainsMono Nerd Font";
+  font-size: 20px;
 	padding-left: 12px;
 	padding-right: 20px;
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -89,7 +101,7 @@ tooltip label{
 }
 
 #taskbar button {
-	min-width: 30px;
+	min-width: 10px;
 	border-bottom: 3px solid rgba(255, 255, 255, 0.3);
 	margin-left: 2px;
 	margin-right: 2px;

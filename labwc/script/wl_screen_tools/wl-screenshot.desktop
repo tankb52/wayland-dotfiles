@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name=Screenshoter for Wayland
+GenericName=Screenshoter
+Comment=A simple wayland screenshoter that also works on wlroots.
+Keywords=pictures;image;screenshot;
+Categories=Graphics;2DGraphics;
+Exec=wl_screenshot
+Hidden=false
+Terminal=false
+Icon=wl_screenshot
+Path=
+StartupNotify=false

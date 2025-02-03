@@ -26,6 +26,9 @@
     <keybind key="S-space">
       <action name="Execute" command="wofi --show drun" />
     </keybind>
+    <keybind key="W-space">
+      <action name="Execute" command="fuzzel" />
+    </keybind>
     <keybind key="A-v">
       <action name="Execute">
         <command>~/.vim-anywhere/bin/run</command>
@@ -65,7 +68,7 @@
         <action name="Execute" command="sh ~/.config/wofi/cliphist.sh" />
     </keybind>
     <keybind key="A-S-a">
-        <action name="Execute" command="sh ~/.config/labwc/script/wayland_shot.sh" />
+        <action name="Execute" command="sh ~/.config/labwc/script/wl_screen_tools/wl_screenshot.sh" />
     </keybind>
 </keyboard>
 
@@ -93,6 +96,7 @@
       针对特定窗口去除装饰
        -->
       <windowRule identifier="wofi" serverDecoration="no" />
+      <windowRule identifier="clash-verge" serverDecoration="no" />
 
   </windowRules>
 </labwc_config>

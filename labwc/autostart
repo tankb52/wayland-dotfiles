@@ -44,7 +44,7 @@ sleep 7s && keepassxc >/dev/null 2>&1 &
 sleep 10s && autokey >/dev/null 2>&1 &
 sleep 12s && vivaldi >/dev/null 2>&1 &
 # 根据深圳经纬度来定制
-sleep 20s && wlsunset -l 22.6 -L 114 >/dev/null 2>&1 &
+sleep 20s && wlsunset -l 22.6 -L 114 -t 4200 -T 6500 >/dev/null 2>&1 &
 xrdb -load ~/.Xresources >/dev/null 2>&1 &
 
 # cliphist

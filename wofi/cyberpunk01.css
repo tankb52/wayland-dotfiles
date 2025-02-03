@@ -1,0 +1,96 @@
+/* ===== 赛博朋克基础框架 ===== */
+#window {
+    background-color: rgba(8, 10, 28, 0.95) !important; /* 深蓝夜空 */
+    border: 1px solid rgba(0, 255, 255, 0.3); /* 青色光边 */
+    border-radius: 0; /* 直角风格 */
+    padding: 15px;
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.2); /* 品红辉光 */
+}
+
+/* ===== 霓虹输入框 ===== */
+#input {
+    background-color: rgba(20, 5, 50, 0.4) !important;
+    border: 2px solid rgba(138, 43, 226, 0.5); /* 蓝紫色 */
+    color: #00FF9D !important; /* 荧光绿 */
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 0 8px rgba(0,255,157,0.3);
+    margin-bottom: 12px;
+    padding: 12px;
+}
+
+/* ===== 赛博条目系统 ===== */
+#entry {
+    /* 基础网格效果 */
+    background-image: 
+        linear-gradient(rgba(0,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,255,0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    margin: 4px 0;
+}
+
+/* 交替透明度规则 */
+#entry:nth-child(odd) {
+    background-color: rgba(0, 113, 255, 0.4); /* 高透明度蓝 */
+    border: 1px solid rgba(0, 255, 255, 0.5); /* 青色霓虹边 */
+}
+
+#entry:nth-child(even) {
+    background-color: rgba(255, 0, 212, 0.3); /* 低透明度品红 */
+    border: 1px solid rgba(255, 0, 212, 0.6); /* 品红霓虹边 */
+}
+
+/* ===== 全息文字系统 ===== */
+#text {
+    color: #FF00FF !important; /* 荧光粉 */
+    text-shadow: 
+        0 0 8px rgba(255,0,255,0.3),
+        0 0 3px rgba(255,255,255,0.5);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ===== 子菜单数字矩阵效果 ===== */
+#expander-box {
+    margin-left: 30px;
+    background: 
+        repeating-linear-gradient(
+            rgba(0,255,255,0.05),
+            rgba(0,255,255,0.05) 2px,
+            transparent 2px,
+            transparent 4px
+        );
+    border-left: 3px solid rgba(0,255,255,0.3);
+}
+
+#expander-box #entry {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid;
+    border-image: linear-gradient(
+        to right,
+        rgba(0,255,255,0.4),
+        rgba(255,0,255,0.4)
+    ) 1;
+}
+
+/* ===== 动态光效 ===== */
+#entry:selected {
+    background-color: rgba(255, 255, 0, 0.3) !important; /* 黄色高亮 */
+    border-color: #FFFF00 !important;
+    /*animation: glow 1s infinite alternate;*/
+    box-shadow: 0 14px 12px rgba(0,0,0,0.2);
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px rgba(255,255,0,0.3);
+    }
+    to {
+        box-shadow: 0 0 15px rgba(255,255,0,0.6);
+    }
+}
+
+#entry:hover {
+    /*filter: brightness(1.3);*/
+    /*transform: skewX(-5deg); [> 赛博失真效果 <]*/
+}
+

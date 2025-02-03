@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # * 
-# * File         : rsync_dotfile.sh
+# * File         : rsync_dotfiles.sh
 # * Version      : 0.2
 # * CreateTime   : 2024-05-19 07:18:05
-# * LastEdit     : 2025-01-30 22:34:06
+# * LastEdit     : 2025-01-30 23:19:32
 # * Author       : Knat
 # * Licence      : Copyright © 2025 Knat. All Rights Reserved.
 # * Desc         : 用 rsync 来增量备份wayland相关软件的配置。

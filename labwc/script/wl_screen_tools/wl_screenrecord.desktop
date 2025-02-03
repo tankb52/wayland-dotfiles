@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=ScreenRecordre for Wayland
+GenericName=ScreenRecorder
+Comment=A simple wayland screen recorder that also works on wlroots.
+Keywords=video;recorder;screenrecorder;
+Categories=Graphics;AudioVideo;
+Exec=xterm -e wl_screenrecord
+Hidden=false
+Terminal=false
+Icon=wl_screenrecord

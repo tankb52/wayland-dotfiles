@@ -1,0 +1,124 @@
+/* ===== 基础窗口样式 ===== */
+#window {
+    background-color: rgba(20, 20, 20, 0.97) !important;
+    border-radius: 15px;
+    padding: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+/* ===== 红色透明搜索框 ===== */
+#input {
+    /* 基础样式 */
+    border: 2px solid rgba(200, 50, 50, 0.4) !important;
+    background-color: rgba(150, 40, 40, 0.2) !important;
+    color: #FFE5E5 !important;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 12px;
+    font-size: 1.1em;
+    
+    /* 过渡效果 */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 搜索框交互状态 */
+#input:hover,
+#input:focus {
+    background-color: rgba(180, 60, 60, 0.3) !important;
+    border-color: rgba(220, 80, 80, 0.6) !important;
+    box-shadow: 0 0 12px rgba(200,50,50,0.25);
+}
+
+/* 占位符样式 */
+#input::placeholder {
+    color: rgba(255, 180, 180, 0.7) !important;
+    font-style: italic;
+}
+
+/* ===== 红绿交替主菜单 ===== */
+#entry {
+    /* 公共样式 */
+    border-radius: 8px;
+    margin: 4px;
+    opacity: 0.8;
+    transition: all 0.25s ease;
+}
+
+/* 奇数项-红色主题 */
+#entry:nth-child(odd) {
+    border: 2px solid rgba(220, 60, 60, 0.7);
+    background-color: rgba(200, 50, 50, 0.15);
+}
+
+/* 偶数项-绿色主题 */
+#entry:nth-child(even) {
+    border: 2px solid rgba(60, 200, 60, 0.7);
+    background-color: rgba(50, 180, 50, 0.15);
+}
+
+/* ===== 子菜单系统 ===== */
+#expander-box {
+    margin-left: 28px;
+    background: rgba(0,0,0,0.12);
+    border-radius: 6px;
+    padding: 4px 0;
+}
+
+#expander-box #entry {
+    /* 继承主菜单颜色 */
+    border-left: 4px solid;
+    background-color: rgba(0,0,0,0.2) !important;
+    margin: 3px 0;
+    opacity: 0.9;
+}
+
+/* 子菜单颜色继承 */
+#entry:nth-child(odd) #expander-box #entry {
+    border-left-color: rgba(220, 80, 80, 0.4); /* 红色系子菜单 */
+}
+#entry:nth-child(even) #expander-box #entry {
+    border-left-color: rgba(80, 220, 80, 0.4); /* 绿色系子菜单 */
+}
+
+/* ===== 文字系统 ===== */
+#text {
+    padding: 6px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    font-size: 1.05em;
+}
+
+/* 主菜单文字颜色 */
+#entry:nth-child(odd) #text {
+    color: #FFD8D8; /* 浅红色文字 */
+}
+#entry:nth-child(even) #text {
+    color: #D8FFD8; /* 浅绿色文字 */
+}
+
+/* 子菜单文字颜色 */
+#expander-box #text {
+    color: #E8E8E8 !important;
+    font-size: 0.95em;
+}
+
+/* ===== 交互状态 ===== */
+#entry:selected {
+    /* 动态颜色增强 */
+    border-color: rgba(255,255,255,0.9) !important;
+    background-color: rgba(255,255,255,0.12) !important;
+    transform: scale(1.02);
+    box-shadow: 0 14px 12px rgba(0,0,0,0.2);
+}
+
+#entry:hover {
+    opacity: 0.95 !important;
+    filter: brightness(1.1);
+}
+
+/* ===== 图片样式 ===== */
+#img {
+    padding: 8px;
+    min-width: 40px;
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.25));
+}
+

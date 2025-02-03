@@ -18,6 +18,7 @@
         "wlr/taskbar"
     ],
     "modules-right": [
+        "custom/menu",
         "cpu",
         "temperature",
         "memory",
@@ -42,19 +43,25 @@
     //    "on-scroll-down": "hyprctl dispatch workspace r-1"
     //},
         "custom/jgmenu":{
-            "format": "❖",
+            "format": "⚛",
             "on-click": "jgmenu_run ",
             "tooltip": false
         },
     "custom/os_button": {
-        "format": "",
+        "format": "❖",
         "on-click": "wofi --show drun",
         "tooltip": false
     },
+          "custom/menu": {
+    "format": "☈ ",  // 空内容，不显示任何文本
+    "tooltip": false,
+    "on-click-right": "exec ~/.config/waybar/right-click-menu.sh",
+    "interval": "once"  // 无需重复执行
+  },
     "cpu": {
         "interval": 5,
         "format": "  {usage}%",
-        "on-click": "xterm  -e 'htop'",
+        "on-click": "xterm -e 'htop'",
         "max-length": 10
     },
     "temperature": {
@@ -63,6 +70,7 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC} ℃ {icon}",
         "format": "{icon}  {temperatureC}℃",
+        "on-click": "xterm  -e 'btop'",
         "format-icons": ["", "", ""]
     },
     "disk": {
@@ -159,7 +167,7 @@
     },
     "pulseaudio": {
         "max-volume": 150,
-        "scroll-step": 10,
+        "scroll-step": 5,
         "format": "{icon} {volume}%",
         "tooltip-format": "{volume}%",
         "format-muted": "🔇 ",
