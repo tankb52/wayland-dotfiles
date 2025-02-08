@@ -1,0 +1,127 @@
+/* ===== 基础窗口样式 ===== */
+#window {
+    background-color: rgba(25, 25, 25, 0.95) !important;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+/* ===== 输入框红色主题 ===== */
+#input {
+    border: 2px solid rgba(200, 50, 50, 0.4) !important;
+    border-radius: 9px;
+    background-color: rgba(150, 40, 40, 0.2) !important;
+    color: #FFE5E5 !important;
+    margin-bottom: 8px;
+    padding: 10px;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+#input:hover,
+#input:focus {
+    background-color: rgba(180, 60, 60, 0.3) !important;
+    border-color: rgba(220, 80, 80, 0.6) !important;
+    box-shadow: 0 0 8px rgba(200,50,50,0.3);
+}
+
+#input::placeholder {
+    color: rgba(255,200,200,0.7) !important;
+}
+
+/* ===== 主条目系统 ===== */
+#entry {
+    border: 2px solid;
+    border-radius: 9px;
+    margin: 3px;
+    opacity: 0.7;
+    transition: all 0.25s ease;
+}
+
+/* 彩虹颜色循环（背景透明度提升到0.3） */
+#entry:nth-child(7n+1) { 
+    border-color: rgba(255, 50, 50, 0.6);    /* 红 */
+    background-color: rgba(255, 50, 50, 0.3);
+}
+#entry:nth-child(7n+2) { 
+    border-color: rgba(255, 165, 0, 0.6);   /* 橙 */
+    background-color: rgba(255, 165, 0, 0.3);
+}
+#entry:nth-child(7n+3) { 
+    border-color: rgba(255, 255, 80, 0.6);  /* 黄 */
+    background-color: rgba(255, 255, 80, 0.3);
+}
+#entry:nth-child(7n+4) { 
+    border-color: rgba(50, 255, 50, 0.6);   /* 绿 */
+    background-color: rgba(50, 255, 50, 0.3);
+}
+#entry:nth-child(7n+5) { 
+    border-color: rgba(50, 150, 255, 0.6);  /* 蓝 */
+    background-color: rgba(50, 150, 255, 0.3);
+}
+#entry:nth-child(7n+6) { 
+    border-color: rgba(100, 0, 200, 0.6);   /* 靛 */
+    background-color: rgba(100, 0, 200, 0.3);
+}
+#entry:nth-child(7n+7) { 
+    border-color: rgba(200, 100, 255, 0.6); /* 紫 */
+    background-color: rgba(200, 100, 255, 0.3);
+}
+
+/* ===== 文字系统 ===== */
+#text {
+    color: #F8F8F8 !important; /* 亮白色 */
+    padding: 6px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* 增强文字阴影 */
+    font-size: 1.05em;
+}
+
+/* ===== 子菜单系统 ===== */
+#expander-box {
+    margin-left: 25px;
+    background: rgba(0,0,0,0.15);
+    border-radius: 8px;
+    padding: 5px 0;
+}
+
+#expander-box #entry {
+    border: none !important;
+    border-left: 4px solid; /* 加粗左侧装饰线 */
+    margin: 2px 0;
+    opacity: 0.85;
+    background-color: rgba(0,0,0,0.25) !important; /* 深色背景 */
+}
+
+/* 子菜单颜色继承（降低饱和度） */
+#expander-box #entry:nth-child(7n+1) { border-left-color: rgba(255,100,100,0.4); }
+#expander-box #entry:nth-child(7n+2) { border-left-color: rgba(255,180,80,0.4); }
+#expander-box #entry:nth-child(7n+3) { border-left-color: rgba(255,255,120,0.4); }
+#expander-box #entry:nth-child(7n+4) { border-left-color: rgba(80,255,80,0.4); }
+#expander-box #entry:nth-child(7n+5) { border-left-color: rgba(80,160,255,0.4); }
+#expander-box #entry:nth-child(7n+6) { border-left-color: rgba(120,50,200,0.4); }
+#expander-box #entry:nth-child(7n+7) { border-left-color: rgba(210,130,255,0.4); }
+
+#expander-box #text {
+    color: #E0E0E0 !important; /* 亮灰色 */
+    font-size: 0.95em;
+}
+
+/* ===== 交互状态 ===== */
+#entry:selected {
+    border-color: rgba(255,255,255,0.95) !important;
+    background-color: rgba(255,255,255,0.15) !important;
+    transform: scale(1.02); /* 添加放大效果 */
+}
+
+#entry:hover, 
+#expander-box #entry:hover {
+    opacity: 0.95 !important;
+    filter: brightness(1.15);
+}
+
+/* ===== 图片样式 ===== */
+#img {
+    padding: 7px;
+    min-width: 36px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); /* 图片投影 */
+}

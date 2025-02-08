@@ -4,7 +4,7 @@
 # * File Name       : wl_screenrecord.sh
 # * Version         : 0.2
 # * Created Time    : 2025年02月03日 星期二 02时14分52秒
-# * Modified Time   : 2025年02月04日 星期二 04时03分41秒
+# * Modified Time   : 2025年02月04日 星期二 04时30分13秒
 # * Author          : Knat
 # * Copyright       : © 2004-2025 Knat. All rights reserved.
 # * Description     : deepseek 脚本：录屏的同时在终端窗口读秒计时。
@@ -45,3 +45,5 @@ while kill -0 $recorder_pid 2>/dev/null; do
 done
 
 echo "Recording finished."
+
+exit 0

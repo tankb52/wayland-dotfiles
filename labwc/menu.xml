@@ -65,7 +65,7 @@
     <action name="Execute" command="alacritty" />
   </item>
   <item label="jgmenu">
-    <action name="Execute" command="jgmenu_run" />
+    <action name="Execute" command="jgmenu --at-pointer" />
   </item>
   <menu id="applications-menu" label="Applications" execute="/usr/bin/obamenu"/>
   <item label="Reconfigure">
@@ -89,6 +89,14 @@
   <item label="Reconfigure">
     <action name="Reconfigure" />
   </item>
+  <item label="Reboot">
+    <action name="Execute" command="systemctl reboot" />
+  </item>
+  <menu id="wlogout" label="wlogout">
+    <item label="wlogout">
+      <action name="Execute" command="wlogout" />
+    </item>
+  </menu>
   <item label="Exit">
     <action name="Exit" />
   </item>

@@ -55,13 +55,14 @@
           "custom/menu": {
     "format": "☈ ",  // 空内容，不显示任何文本
     "tooltip": false,
+    "on-click": "jgmenu  --at-pointer",
     "on-click-right": "exec ~/.config/waybar/right-click-menu.sh",
     "interval": "once"  // 无需重复执行
   },
     "cpu": {
         "interval": 5,
         "format": "  {usage}%",
-        "on-click": "xterm -e 'htop'",
+        "on-click": "xterm -e 'btop'",
         "max-length": 10
     },
     "temperature": {
@@ -70,7 +71,7 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC} ℃ {icon}",
         "format": "{icon}  {temperatureC}℃",
-        "on-click": "xterm  -e 'btop'",
+        "on-click": "xterm  -e 'htop'",
         "format-icons": ["", "", ""]
     },
     "disk": {
@@ -126,8 +127,8 @@
         }
     },
     "network": {
-        "format-wifi": " {icon}",
         "format-ethernet": "🖧 ",
+        "format-wifi": "",
         "format-disconnected": "⚠",
         "tooltip-format": "{ipaddr}",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)  | {ipaddr}",

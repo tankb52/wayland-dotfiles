@@ -14,3 +14,5 @@
 timestamp=$(date +"%Y%m%d-%H%M%S")
 grim -g "$(slurp )" -t png $HOME/Pictures/screen/grim-$timestamp.png
 ksnip $HOME/Pictures/screen/grim-$timestamp.png
+
+exit 0

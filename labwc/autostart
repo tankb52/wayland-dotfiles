@@ -35,6 +35,8 @@ swayidle -w \
     before-sleep 'swaylock -f -c 000000' >/dev/null 2>&1 &
 
 lxqt-policykit-agent >/dev/null 2>&1 &
+#自动删除钥匙环文件，避免登录后需要重新输入密码
+rm -f ~/.local/share/keyrings/login.keyring 
 # 鼠标按键映射到快捷键
 input-remapper-control --command autoload >/dev/null 2>&1 &
 sleep 3s && swaybg -i ~/Pictures/wallpaper/461079.jpg >/dev/null 2>&1 &
