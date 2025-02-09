@@ -15,14 +15,14 @@
 # 定义菜单选项和对应命令
 menu_options=(
   "  Settings"   "gnome-control-center"  # 示例：打开系统设置
-  "  Restart Bar" "killall waybar;sleep 1 && waybar &"
-  "⏏  Wlogout" "wlogout"
-  "  Reboot"     "systemctl reboot"
-  "  Lock"       "swaylock"
+  "  Restart Bar"
+  "⏏  Wlogout" 
+  "  Reboot"
+  "  Lock"
 )
 
 # 生成 wofi 菜单
-selected=$(printf "%s\n" "${menu_options[@]}" | wofi --dmenu -p "Menu" --lines 4)
+selected=$(printf "%s\n" "${menu_options[@]}" | wofi --dmenu -p "Menu" --lines 6)
 
 # 执行对应命令
 case "$selected" in

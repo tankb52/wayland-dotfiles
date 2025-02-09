@@ -51,7 +51,7 @@
     </keybind>
     <keybind key="W-c">
         <action name="Execute">
-            <command>sh ~/.config/openbox/closeLCD.sh</command>
+            <command>sh ~/.config/labwc/script/wl-toggle-lcd.sh</command>
         </action>
     </keybind>
     <keybind key="W-l">
